@@ -8,9 +8,9 @@ variable "environment" {
 
 variable "commn_tags" {
   default = {
-    project = "roboshop"
+    project     = "roboshop"
     environment = "dev"
-    terraform = true
+    terraform   = true
   }
 }
 

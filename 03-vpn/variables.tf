@@ -1,17 +1,17 @@
 variable "project_name" {
-  type = string
+  type    = string
   default = "roboshop"
 }
 
 variable "environment" {
-  type = string
+  type    = string
   default = "dev"
 }
 
 variable "commn_tags" {
   default = {
-    project = "roboshop"
+    project     = "roboshop"
     environment = "dev"
-    terraform = true
+    terraform   = true
   }
 }

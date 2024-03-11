@@ -13,7 +13,7 @@ data "aws_ami" "centos8" {
   }
 
   filter {
-    name = "virtualization-type"
+    name   = "virtualization-type"
     values = ["hvm"]
   }
 }
@@ -23,12 +23,12 @@ data "aws_vpc" "default" {
 }
 
 data "aws_subnet" "default" {
-  vpc_id = data.aws_vpc.default.id
+  vpc_id            = data.aws_vpc.default.id
   availability_zone = "us-east-1a"
 }
 
 data "aws_ssm_parameter" "vpn_sg_id" {
   name = "/${var.project_name}/${var.environment}/vpn_sg_id"
-  
+
 }
 
